@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+}
+
+/* HEADER */
+header {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* FILTRES */
+.filters {
+  background: white;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.filter-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+
+}
+
+/* SLIDERS MIN/MAX PRIX */
+input[type="range"] {
+  width: 220px;
+  height: 6px;
+  accent-color: #EF651B;  /* barre active et curseur orange */
+  background-color: #ddd;  /* barre inactive gris clair */
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 0.7rem;
+  border-radius: 6px;
+  min-width: 160px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  z-index: 100;
+}
+
+
+.dropdown-content.show {
+  display: block;
+}
+.dropdown-content label {
+  display: block;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+}
+
+
+/* CONTAINER */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* CARTES */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* IMAGES UNIFORMES */
+.card img {
+  width: 100%;
+  height: 180px;      /* hauteur max */
+  object-fit: contain; /* garde les proportions */
+  background: #f4f6f8; /* couleur de fond pour les zones vides */
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+/* TITRES ET TEXTES */
+.card h2 {
+  margin: 0.6rem 0 0.3rem;
+}
+
+/* BOUTONS */
+button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+button:hover:not(:disabled) {
+  background: #256428;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: white;
+  max-width: 500px;
+  margin: 8% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.iban {
+  background: #f1f1f1;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* MESSAGE AUCUN OBJET */
+.no-result {
+  display: none;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}

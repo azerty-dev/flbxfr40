@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Soutenir le groupe scout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Soutenez le groupe de Friboug des Flambeaux de L'Evangile pour ses 40 ans !</h1>
+  <p>Financez concrètement le matériel dont nous avons besoin</p>
+</header>
+
+<!-- ================= Filters ================= -->
+<section class="filters">
+
+  <div class="filter-block">
+    <label>Prix minimum : <span id="minPriceValue">0</span> CHF</label>
+    <input type="range" id="minPrice" min="0" max="100" value="0">
+  </div>
+
+  <div class="filter-block">
+    <label>Prix maximum : <span id="maxPriceValue">100</span> CHF</label>
+    <input type="range" id="maxPrice" min="0" max="100" value="100">
+  </div>
+
+  <div class="filter-block dropdown">
+    <button class="dropdown-btn">Catégories ⬇</button>
+    <div class="dropdown-content">
+      <label><input type="checkbox" value="outil" checked> Outils</label>
+      <label><input type="checkbox" value="nettoyage" checked> Nettoyage</label>
+      <label><input type="checkbox" value="cuisine" checked> Cuisine</label>
+      <label><input type="checkbox" value="construction" checked> Construction</label>
+      <label><input type="checkbox" value="topo" checked> Topographie</label>
+      <label><input type="checkbox" value="grimpe" checked> Grimpe</label>
+      <label><input type="checkbox" value="organisation local" checked> Organisation local</label>
+      <label><input type="checkbox" value="jeu" checked> Jeu</label>
+      <label><input type="checkbox" value="cdf" checked> Cdf</label>
+      <label><input type="checkbox" value="autre" checked> Autre</label>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================= Container Cards ================= -->
+<main class="container"></main>
+
+<!-- ================= Message aucun résultat ================= -->
+<p id="noResult" class="no-result">
+  😕 Aucun objet ne correspond à vos critères.
+</p>
+
+<!-- ================= Modal Don ================= -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fermerModal()">&times;</span>
+    <h2 id="objetNom"></h2>
+    <p>Merci pour votre soutien 🙏</p>
+    <div class="iban">
+      <p><strong>IBAN :</strong> FR76 XXXX XXXX XXXX</p>
+      <p><strong>Montant conseillé :</strong> <span id="montant"></span> CHF</p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
