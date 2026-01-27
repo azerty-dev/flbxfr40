@@ -2,16 +2,42 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Soutenir le groupe scout</title>
+  <title>Page de soutien pour l'achat du matériel des Flambeaux de Fribourg</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Soutenez le groupe de Friboug des Flambeaux de L'Evangile pour ses 40 ans !</h1>
-  <p>Financez concrètement le matériel dont nous avons besoin</p>
+<header class="site-header">
+  <div class="header-content">
+    <img
+      src="assets/FLBX-Logo_Fribourg_petit.png"
+      alt="Logo fr petit"
+      class="header-logo"
+    />
+
+    <div class="header-text">
+      <h1>Soutenez les Flambeaux de Fribourg</h1>
+      <p>Participez à l’achat de matériel pour nos activités et camps !</p>
+    </div>
+  </div>
 </header>
 
+<section class="cta-header">
+  <div class="cta-content">
+    <p class="cta-text">
+      Vous pouvez aussi nous soutenir avec les <strong>bons assiociatifs</strong> de la Migros 
+    </p>
+
+    <a
+      href="https://supportmycamp.migros.ch/fr/associations/flambeaux-de-levangile-de-fribourg/"
+      target="_blank"
+      rel="noopener"
+      class="cta-button"
+    >
+      Attribuer un bon / Faire un don
+    </a>
+  </div>
+</section>
 <!-- ================= Filters ================= -->
 <section class="filters">
 
@@ -26,7 +52,7 @@
   </div>
 
   <div class="filter-block dropdown">
-    <button class="dropdown-btn">Catégories ⬇</button>
+    <button class="dropdown-btn">Catégories</button>
     <div class="dropdown-content">
       <label><input type="checkbox" value="outil" checked> Outils</label>
       <label><input type="checkbox" value="nettoyage" checked> Nettoyage</label>
@@ -48,7 +74,7 @@
 
 <!-- ================= Message aucun résultat ================= -->
 <p id="noResult" class="no-result">
-  😕 Aucun objet ne correspond à vos critères.
+  Aucun objet ne correspond à vos critères.
 </p>
 
 <!-- ================= Modal Don ================= -->
@@ -56,10 +82,11 @@
   <div class="modal-content">
     <span class="close" onclick="fermerModal()">&times;</span>
     <h2 id="objetNom"></h2>
-    <p>Merci pour votre soutien 🙏</p>
+    <p>Merci pour votre soutien !</p>
+    <p>"Brillez comme des Flambeaux dans le monde portant la parole de vie!" Phil. 2.15</p>
     <div class="iban">
       <p><strong>IBAN :</strong> FR76 XXXX XXXX XXXX</p>
-      <p><strong>Montant conseillé :</strong> <span id="montant"></span> CHF</p>
+      <p><strong>Montant :</strong> <span id="montant"></span> CHF</p>
     </div>
   </div>
 </div>

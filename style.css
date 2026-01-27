@@ -9,11 +9,46 @@ body {
 }
 
 /* HEADER */
-header {
+.site-header {
   background: #2e7d32;
   color: white;
+  padding: 2rem 1.5rem;
+}
+
+/* Conteneur */
+.header-content {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 120px;
+}
+
+/* LOGO À GAUCHE */
+.header-logo {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* TEXTE PARFAITEMENT CENTRÉ */
+.header-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  padding: 2rem 1rem;
+}
+
+.header-text h1 {
+  margin: 0;
+}
+
+.header-text p {
+  margin-top: 0.5rem;
 }
 
 /* FILTRES */
@@ -33,6 +68,64 @@ header {
   gap: 0.4rem;
   font-size: 0.95rem;
 
+}
+
+@media (max-width: 700px) {
+  .header-content {
+    height: auto;
+  }
+
+  .header-logo {
+    position: static;
+    transform: none;
+    display: block;
+    margin: 0 auto 1rem;
+    height: 90px;
+  }
+
+  .header-text {
+    position: static;
+    transform: none;
+  }
+}
+
+/* HEADER ORANGE (CTA) */
+.cta-header {
+  background: #EF651B;
+  padding: 1.2rem 1rem;
+}
+
+.cta-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.cta-text {
+  color: white;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* BOUTON CTA */
+.cta-button {
+  background: white;
+  color: #EF651B;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.cta-button:hover {
+  background: #fff3ea;
+  transform: translateY(-2px);
 }
 
 /* SLIDERS MIN/MAX PRIX */
