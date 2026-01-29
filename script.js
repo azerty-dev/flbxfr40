@@ -114,7 +114,6 @@ function filter() {
 // =======================
 function donner(objet, prix) {
   document.getElementById("objetNom").textContent = objet;
-//   document.getElementById("objetNom2").textContent = objet;
   document.getElementById("montant").textContent = prix;
   document.getElementById("modal").style.display = "block";
 }
@@ -134,11 +133,19 @@ document.querySelectorAll(".dropdown-btn").forEach(btn => {
   });
 });
 
-// Fermer le menu si on clique ailleurs
-window.addEventListener("click", (e) => {
-  document.querySelectorAll(".dropdown-content").forEach(menu => {
-    if (!menu.contains(e.target) && !menu.previousElementSibling.contains(e.target)) {
-      menu.classList.remove("show");
-    }
-  });
+
+// =======================
+// INFO DROPDOWN
+// =======================
+const infoBox = document.querySelector('.info-box');
+const infoToggle = document.querySelector('.info-toggle');
+
+// État initial selon la taille d'écran
+if (window.innerWidth > 700) {
+  infoBox.classList.add('open');
+}
+
+// Toggle manuel
+infoToggle.addEventListener('click', () => {
+  infoBox.classList.toggle('open');
 });

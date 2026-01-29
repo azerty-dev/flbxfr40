@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Page de soutien pour l'achat du matériel des Flambeaux de Fribourg</title>
+  <title>Page de soutien des Flambeaux de Fribourg pour l'achat de matériel</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
 
     <div class="header-text">
       <h1>Soutenez les Flambeaux de Fribourg</h1>
-      <p>Participez à l’achat de matériel pour nos activités et camps !</p>
+      <p>Participez à l'achat de matériel pour nos activités et camps !</p>
     </div>
   </div>
 </header>
@@ -69,6 +69,37 @@
 
 </section>
 
+<!-- ================= Info box ================= -->
+<section class="info-box">
+  <button class="info-toggle" aria-expanded="true">
+    Informations importantes
+    <span class="arrow">▼</span>
+  </button>
+
+  <div class="info-content">
+    <ul>
+      <li>
+        Les <strong>quantités sont mises à jour quotidiennement</strong>.
+      </li>
+      <li>
+        Si un article est déjà entièrement financé mais que le site n'a pas encore été mis à jour,
+        <strong>votre contribution sera réattribuée</strong> à un autre article, de toute façon pour le 
+        <strong>matériel des Flambeaux Fribourg</strong>.
+      </li>
+      <li>
+        Lorsqu'un prix est précédé d'une <strong>fraction (ex. 1/3, 1/5)</strong>,
+        cela signifie que le coût total a été divisé : vous financez <strong>une part de l'article</strong>.
+      </li>
+      <li>
+        Les <strong>photos correspondent en principe aux articles</strong>, mais le modèle exact
+        peut changer.
+      </li>
+      <li>
+        <strong>Indiquez dans le payement l'article et la quantité financée.</strong>
+      </li>
+    </ul>
+  </div>
+</section>
 <!-- ================= Container Cards ================= -->
 <main class="container"></main>
 
@@ -81,15 +112,34 @@
 <div id="modal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="fermerModal()">&times;</span>
+    
+    <!-- Titre de l'objet -->
     <h2 id="objetNom"></h2>
-    <p>Merci pour votre soutien !</p>
-    <p>"Brillez comme des Flambeaux dans le monde portant la parole de vie!" Phil. 2.15</p>
-    <div class="iban">
-      <p><strong>IBAN :</strong> FR76 XXXX XXXX XXXX</p>
-      <p><strong>Montant :</strong> <span id="montant"></span> CHF</p>
+
+    <!-- Images : logo + QR code -->
+    <div class="modal-images">
+      <img src="assets/FLBX-Logo_Fribourg.png" alt="Logo FLBX FR">
+      <img src="assets/Qr-code twint.jpg" alt="QR Code paiement">
     </div>
-  </div>
+
+    <!-- IBAN et montant -->
+    <div class="iban">
+      <div class="iban-text">
+        <p><strong>IBAN :</strong> CH66 0900 0000 4020 7705 3</p>
+        <p>Groupe Flambeaux de l'Evangile</p>
+        <p>1700 Fribourg</p>
+      </div>
+      <p class="montant"><strong>Montant :</strong> <span id="montant"></span> CHF</p>
+    </div>
+    <div class="remerciement-text">
+      <p><strong>Merci pour votre soutien !</strong></p>
+      <p>"Brillez comme des Flambeaux dans le monde portant la parole de vie !" Phil. 2.15</p>
+    </div>
+    </div>
 </div>
+
+
+    
 
 <script src="script.js"></script>
 </body>
