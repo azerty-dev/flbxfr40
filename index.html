@@ -1,146 +1,143 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <title>Page de soutien des Flambeaux de Fribourg pour l'achat de matériel</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="header-content">
-    <img
-      src="assets/FLBX-Logo_Fribourg_petit.png"
-      alt="Logo fr petit"
-      class="header-logo"
-    />
+  <header class="site-header">
+    <div class="header-content">
+      <img src="assets/FLBX-Logo_Fribourg_petit.png" alt="Logo fr petit" class="header-logo" />
 
-    <div class="header-text">
-      <h1>Soutenez les Flambeaux de Fribourg</h1>
-      <p>Participez à l'achat de matériel pour nos activités et camps !</p>
-    </div>
-  </div>
-</header>
-
-<section class="cta-header">
-  <div class="cta-content">
-    <p class="cta-text">
-      Vous pouvez aussi nous soutenir avec les <strong>bons assiociatifs</strong> de la Migros 
-    </p>
-
-    <a
-      href="https://supportmycamp.migros.ch/fr/associations/flambeaux-de-levangile-de-fribourg/"
-      target="_blank"
-      rel="noopener"
-      class="cta-button"
-    >
-      Attribuer un bon / Faire un don
-    </a>
-  </div>
-</section>
-<!-- ================= Filters ================= -->
-<section class="filters">
-
-  <div class="filter-block">
-    <label>Prix minimum : <span id="minPriceValue">0</span> CHF</label>
-    <input type="range" id="minPrice" min="0" max="100" value="0">
-  </div>
-
-  <div class="filter-block">
-    <label>Prix maximum : <span id="maxPriceValue">100</span> CHF</label>
-    <input type="range" id="maxPrice" min="0" max="100" value="100">
-  </div>
-
-  <div class="filter-block dropdown">
-    <button class="dropdown-btn">Catégories</button>
-    <div class="dropdown-content">
-      <label><input type="checkbox" value="outil" checked> Outils</label>
-      <label><input type="checkbox" value="nettoyage" checked> Nettoyage</label>
-      <label><input type="checkbox" value="cuisine" checked> Cuisine</label>
-      <label><input type="checkbox" value="construction" checked> Construction</label>
-      <label><input type="checkbox" value="topo" checked> Topographie</label>
-      <label><input type="checkbox" value="grimpe" checked> Grimpe</label>
-      <label><input type="checkbox" value="organisation local" checked> Organisation local</label>
-      <label><input type="checkbox" value="jeu" checked> Jeu</label>
-      <label><input type="checkbox" value="cdf" checked> Cdf</label>
-      <label><input type="checkbox" value="autre" checked> Autre</label>
-    </div>
-  </div>
-
-</section>
-
-<!-- ================= Info box ================= -->
-<section class="info-box">
-  <button class="info-toggle" aria-expanded="true">
-    Informations importantes
-    <span class="arrow">▼</span>
-  </button>
-
-  <div class="info-content">
-    <ul>
-      <li>
-        Les <strong>quantités sont mises à jour quotidiennement</strong>.
-      </li>
-      <li>
-        Si un article est déjà entièrement financé mais que le site n'a pas encore été mis à jour,
-        <strong>votre contribution sera réattribuée</strong> à un autre article, de toute façon pour le 
-        <strong>matériel des Flambeaux Fribourg</strong>.
-      </li>
-      <li>
-        Lorsqu'un prix est précédé d'une <strong>fraction (ex. 1/3, 1/5)</strong>,
-        cela signifie que le coût total a été divisé : vous financez <strong>une part de l'article</strong>.
-      </li>
-      <li>
-        Les <strong>photos correspondent en principe aux articles</strong>, mais le modèle exact
-        peut changer.
-      </li>
-      <li>
-        <strong>Indiquez dans le payement l'article et la quantité financée.</strong>
-      </li>
-    </ul>
-  </div>
-</section>
-<!-- ================= Container Cards ================= -->
-<main class="container"></main>
-
-<!-- ================= Message aucun résultat ================= -->
-<p id="noResult" class="no-result">
-  Aucun objet ne correspond à vos critères.
-</p>
-
-<!-- ================= Modal Don ================= -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="fermerModal()">&times;</span>
-    
-    <!-- Titre de l'objet -->
-    <h2 id="objetNom"></h2>
-
-    <!-- Images : logo + QR code -->
-    <div class="modal-images">
-      <img src="assets/FLBX-Logo_Fribourg.png" alt="Logo FLBX FR">
-      <img src="assets/Qr-code twint.jpg" alt="QR Code paiement">
-    </div>
-
-    <!-- IBAN et montant -->
-    <div class="iban">
-      <div class="iban-text">
-        <p><strong>IBAN :</strong> CH66 0900 0000 4020 7705 3</p>
-        <p>Groupe Flambeaux de l'Evangile</p>
-        <p>1700 Fribourg</p>
+      <div class="header-text">
+        <h1>Soutenez les Flambeaux de Fribourg</h1>
+        <p>Participez à l'achat de matériel pour nos activités et camps !</p>
       </div>
-      <p class="montant"><strong>Montant :</strong> <span id="montant"></span> CHF</p>
     </div>
-    <div class="remerciement-text">
-      <p><strong>Merci pour votre soutien !</strong></p>
-      <p>"Brillez comme des Flambeaux dans le monde portant la parole de vie !" Phil. 2.15</p>
+  </header>
+
+  <section class="cta-header">
+    <div class="cta-content">
+      <p class="cta-text">
+        Vous pouvez aussi nous soutenir avec les <strong>bons assiociatifs</strong> de la Migros
+      </p>
+
+      <a href="https://supportmycamp.migros.ch/fr/associations/flambeaux-de-levangile-de-fribourg/" target="_blank"
+        rel="noopener" class="cta-button">
+        Attribuer un bon / Faire un don
+      </a>
     </div>
+  </section>
+  <!-- ================= Filters ================= -->
+  <section class="filters">
+
+    <div class="filter-block">
+      <label>Prix minimum : <span id="minPriceValue">0</span> CHF</label>
+      <input type="range" id="minPrice" min="0" max="100" value="0">
     </div>
-</div>
+
+    <div class="filter-block">
+      <label>Prix maximum : <span id="maxPriceValue">100</span> CHF</label>
+      <input type="range" id="maxPrice" min="0" max="100" value="100">
+    </div>
+
+    <div class="filter-block dropdown">
+      <button class="dropdown-btn">Catégories</button>
+      <div class="dropdown-content">
+        <label><input type="checkbox" value="outil" checked> Outils</label>
+        <label><input type="checkbox" value="nettoyage" checked> Nettoyage</label>
+        <label><input type="checkbox" value="cuisine" checked> Cuisine</label>
+        <label><input type="checkbox" value="construction" checked> Construction</label>
+        <label><input type="checkbox" value="topo" checked> Topographie</label>
+        <label><input type="checkbox" value="grimpe" checked> Grimpe</label>
+        <label><input type="checkbox" value="organisation local" checked> Organisation local</label>
+        <label><input type="checkbox" value="jeu" checked> Jeu</label>
+        <label><input type="checkbox" value="cdf" checked> Cdf</label>
+        <label><input type="checkbox" value="autre" checked> Autre</label>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= Info box ================= -->
+  <section class="info-box">
+    <button class="info-toggle" aria-expanded="true">
+      Informations importantes
+      <span class="arrow">▼</span>
+    </button>
+
+    <div class="info-content">
+      <ul>
+        <li>
+          Les <strong>quantités sont mises à jour quotidiennement</strong>.
+        </li>
+        <li>
+          Si un article est déjà entièrement financé mais que le site n'a pas encore été mis à jour,
+          <strong>votre contribution sera réattribuée</strong> à un autre article, de toute façon pour le
+          <strong>matériel des Flambeaux Fribourg</strong>.
+        </li>
+        <li>
+          Lorsqu'un prix est précédé d'une <strong>fraction (ex. 1/3, 1/5)</strong>,
+          cela signifie que le coût total a été divisé : vous financez <strong>une part de l'article</strong>.
+        </li>
+        <li>
+          Les <strong>photos correspondent en principe aux articles</strong>, mais le modèle exact
+          peut changer.
+        </li>
+        <li>
+          <strong>Merci d'indiquer dans le payement l'article et la quantité financée.</strong>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- ================= Container Cards ================= -->
+  <main class="container"></main>
+
+  <!-- ================= Message aucun résultat ================= -->
+  <p id="noResult" class="no-result">
+    Aucun objet ne correspond à vos critères.
+  </p>
+
+  <!-- ================= Modal Don ================= -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fermerModal()">&times;</span>
+
+      <!-- Titre de l'objet -->
+      <h2 id="objetNom"></h2>
+
+      <!-- Images : logo + QR code -->
+      <div class="modal-images">
+        <img src="assets/FLBX-Logo_Fribourg.png" alt="Logo FLBX FR">
+        <img src="assets/Qr-code twint.jpg" alt="QR Code paiement e-banking">
+      </div>
+      <p class="qr-note">QR-code d'E-banking, <strong>pas TWINT</strong>.</p>
+
+      <!-- IBAN et montant -->
+      <div class="iban">
+        <div class="iban-text">
+          <p><strong>IBAN :</strong> CH66 0900 0000 4020 7705 3</p>
+          <p>Groupe Flambeaux de l'Evangile</p>
+          <p>1700 Fribourg</p>
+        </div>
+        <p class="montant"><strong>Montant :</strong> <span id="montant"></span> CHF</p>
+        Merci d'indiquer dans le payement l'article et la quantité financée.
+      </div>
+      <div class="remerciement-text">
+        <p><strong>Merci pour votre soutien !</strong></p>
+        <p>"Brillez comme des Flambeaux dans le monde portant la parole de vie !" Phil. 2.15</p>
+      </div>
+    </div>
+  </div>
 
 
-    
 
-<script src="script.js"></script>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

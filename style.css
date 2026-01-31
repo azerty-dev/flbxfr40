@@ -98,21 +98,22 @@ body {
   .site-header {
     padding: 1rem 1.5rem;
   }
+
   .header-content {
     position: static;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: auto;
-    padding: 0px 0px; 
+    padding: 0px 0px;
   }
 
   .header-logo {
     position: static;
     transform: none;
-    height: 140px;      
-    width: auto;       
-    margin-bottom: 0.2rem; 
+    height: 140px;
+    width: auto;
+    margin-bottom: 0.2rem;
   }
 
   .header-text {
@@ -146,8 +147,10 @@ body {
 input[type="range"] {
   width: 220px;
   height: 6px;
-  accent-color: #EF651B;  /* barre active et curseur orange */
-  background-color: #ddd;  /* barre inactive gris clair */
+  accent-color: #EF651B;
+  /* barre active et curseur orange */
+  background-color: #ddd;
+  /* barre inactive gris clair */
   border-radius: 5px;
   cursor: pointer;
   outline: none;
@@ -171,6 +174,7 @@ input[type="range"] {
 .dropdown-btn:hover {
   background: #256428;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -181,7 +185,7 @@ input[type="range"] {
   padding: 0.7rem;
   border-radius: 6px;
   min-width: 160px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   z-index: 100;
 }
 
@@ -189,6 +193,7 @@ input[type="range"] {
 .dropdown-content.show {
   display: block;
 }
+
 .dropdown-content label {
   display: block;
   margin-bottom: 0.4rem;
@@ -208,7 +213,7 @@ input[type="range"] {
 /* BOUTON INFO */
 .info-toggle {
   width: 100%;
-  background: #fff8f3;     
+  background: #fff8f3;
   padding: 1rem 1.2rem;
   margin: 0;
   font-size: 1.05rem;
@@ -226,7 +231,7 @@ input[type="range"] {
 
 .info-toggle:hover {
   background: #ffe4d1;
-  color: #d35b16;       
+  color: #d35b16;
 }
 
 
@@ -237,16 +242,16 @@ input[type="range"] {
 
 /* CONTENU SLIDE */
 .info-content {
-  max-height: 0;             
+  max-height: 0;
   overflow: hidden;
-  padding: 0 1.2rem;        
+  padding: 0 1.2rem;
   transition: max-height 0.4s ease, padding-bottom 0.4s ease;
 }
 
 /* OUVERT */
 .info-box.open .info-content {
-  max-height: 500px;         
-  padding-bottom: 1.2rem;    
+  max-height: 500px;
+  padding-bottom: 1.2rem;
 }
 
 .info-box.open .arrow {
@@ -279,7 +284,7 @@ input[type="range"] {
   background: white;
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
   text-align: center;
   transition: transform 0.2s ease;
 }
@@ -291,9 +296,12 @@ input[type="range"] {
 /* IMAGES UNIFORMES */
 .card img {
   width: 100%;
-  height: 180px;      /* hauteur max */
-  object-fit: contain; /* garde les proportions */
-  background: #f4f6f8; /* couleur de fond pour les zones vides */
+  height: 180px;
+  /* hauteur max */
+  object-fit: contain;
+  /* garde les proportions */
+  background: #f4f6f8;
+  /* couleur de fond pour les zones vides */
   display: block;
   border-radius: 6px;
   margin-bottom: 0.8rem;
@@ -330,19 +338,20 @@ button:disabled {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1000;
 }
 
 .modal-content {
   background: white;
   max-width: 500px;
-  margin: 8% auto;
+  margin: 3% auto;
   padding: 2rem;
   border-radius: 8px;
   position: relative;
   overflow-y: auto;
-  max-height: 90vh; /* permet scroll si contenu trop grand */
+  max-height: 90vh;
+  /* permet scroll si contenu trop grand */
 }
 
 .close {
@@ -359,15 +368,18 @@ button:disabled {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 .modal-images img {
-  max-width: 48%;  /* ne dépasse pas la moitié de la modal */
-  height: auto;     /* garde les proportions */
+  max-width: 48%;
+  /* ne dépasse pas la moitié de la modal */
+  height: auto;
+  /* garde les proportions */
   object-fit: contain;
   border-radius: 6px;
-  background: #f4f6f8; /* pour le QR ou logo si fond transparent */
+  background: #f4f6f8;
+  /* pour le QR ou logo si fond transparent */
 }
 
 /* IBAN ET MONTANT */
@@ -375,15 +387,17 @@ button:disabled {
   background: #f1f1f1;
   padding: 1rem;
   border-radius: 6px;
-  margin: 1rem 0;
+  margin: 0, 2rem 1;
 }
 
 .iban-text p {
-  margin: 0.2rem 0;  /* espace entre les lignes du bloc IBAN */
+  margin: 0.2rem 0;
+  /* espace entre les lignes du bloc IBAN */
 }
 
 .iban .montant {
-  margin-top: 0.8rem; /* espace avant le montant */
+  margin-top: 0.8rem;
+  /* espace avant le montant */
   font-weight: bold;
 }
 
@@ -391,11 +405,19 @@ button:disabled {
   margin-bottom: 0;
 }
 
-.remerciement-text{
+.remerciement-text {
   color: #2e7d32;
   margin: 0px;
   padding: 0;
 
+}
+
+.qr-note {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.4rem;
+  margin-top: 0.4rem;
 }
 
 /* MESSAGE AUCUN OBJET */
@@ -406,4 +428,3 @@ button:disabled {
   color: #666;
   margin-bottom: 2rem;
 }
-
