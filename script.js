@@ -112,9 +112,19 @@ function filter() {
 // =======================
 // MODAL DON
 // =======================
+function ouvrirDon() {
+  document.getElementById("objetNom").textContent = "Faire un don";
+  document.getElementById("montant").textContent = "";
+  document.getElementById("montantLigne").style.display = "none";
+  document.getElementById("montantNote").style.display = "none";
+  document.getElementById("modal").style.display = "block";
+}
+
 function donner(objet, prix) {
   document.getElementById("objetNom").textContent = objet;
   document.getElementById("montant").textContent = prix;
+  document.getElementById("montantLigne").style.display = "block";
+  document.getElementById("montantNote").style.display = "block";
   document.getElementById("modal").style.display = "block";
 }
 

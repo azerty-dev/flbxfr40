@@ -23,13 +23,19 @@
   <section class="cta-header">
     <div class="cta-content">
       <p class="cta-text">
-        Vous pouvez aussi nous soutenir avec les <strong>bons assiociatifs</strong> de la Migros
+        Vous pouvez aussi nous soutenir avec un don ou en achetant un pull de soutien.
       </p>
 
-      <a href="https://supportmycamp.migros.ch/fr/associations/flambeaux-de-levangile-de-fribourg/" target="_blank"
-        rel="noopener" class="cta-button">
-        Attribuer un bon / Faire un don
-      </a>
+      <div class="cta-actions">
+        <button type="button" class="cta-button" onclick="ouvrirDon()">
+          Faire un don
+        </button>
+
+        <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=NO72DCO060WFiCpurQ5qbA6wbkObav9MhLD4-dQ8fuJUNUxGNFdQR1hWSkozN0hKT1Q5VDVaSVNZQS4u"
+          target="_blank" rel="noopener" class="cta-button cta-button-alt">
+          Acheter un pull
+        </a>
+      </div>
     </div>
   </section>
   <!-- ================= Filters ================= -->
@@ -113,9 +119,10 @@
       <!-- Images : logo + QR code -->
       <div class="modal-images">
         <img src="assets/FLBX-Logo_Fribourg.png" alt="Logo FLBX FR">
-        <img src="assets/Qr-code twint.jpg" alt="QR Code paiement e-banking">
+        <img src="assets/Qr ebanking.jpg" alt="QR Code paiement e-banking">
       </div>
-      <p class="qr-note">QR-code d'E-banking, <strong>pas TWINT</strong>.</p>
+      <p class="qr-note">QR-code d'E-banking en haut, Twint en bas.</p>
+      <img class="twint-qr" src="assets\qr twint FLBXFR info paiement .png" alt="QR Code Twint">
 
       <!-- IBAN et montant -->
       <div class="iban">
@@ -124,8 +131,8 @@
           <p>Groupe Flambeaux de l'Evangile</p>
           <p>1700 Fribourg</p>
         </div>
-        <p class="montant"><strong>Montant :</strong> <span id="montant"></span> CHF</p>
-        Merci d'indiquer dans le payement l'article et la quantité financée.
+        <p class="montant" id="montantLigne"><strong>Montant :</strong> <span id="montant"></span> CHF</p>
+        <p id="montantNote">Merci d'indiquer dans le payement l'article et la quantité financée.</p>
       </div>
       <div class="remerciement-text">
         <p><strong>Merci pour votre soutien !</strong></p>
